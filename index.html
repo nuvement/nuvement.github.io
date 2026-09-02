@@ -56,9 +56,6 @@
     .product-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
     .button { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 255, 255, 0.04); text-decoration: none; font-size: 0.92rem; font-weight: 650; }
     .button:hover, .button:focus-visible { background: rgba(255, 255, 255, 0.09); border-color: rgba(255, 255, 255, 0.18); }
-    .contact-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0 0; }
-    .contact-row p { margin: 0; color: var(--muted); }
-    .contact-row a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
     footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px 0 42px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.86rem; }
     footer p { margin: 0; }
     @media (max-width: 720px) {
@@ -69,7 +66,7 @@
       .hero-logo { margin-bottom: 34px; }
       .section { padding: 56px 0; }
       .section-heading { grid-template-columns: 1fr; gap: 18px; }
-      .contact-row, footer { align-items: flex-start; flex-direction: column; }
+      footer { align-items: flex-start; flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
@@ -116,10 +113,12 @@
       <section class="section" id="contact" aria-labelledby="contact-title">
         <div class="section-heading">
           <h2 id="contact-title">Contact</h2>
-          <p>Questions, feedback or something worth building?</p>
-        </div>
-        <div class="contact-row">
-          <p>Email Nuvement at <a href="mailto:nuvement.apps@gmail.com">nuvement.apps@gmail.com</a>.</p>
+          <div>
+            <p>Questions, feedback or something worth building?</p>
+            <div class="product-links">
+              <a class="button" href="mailto:nuvement.apps@gmail.com">nuvement.apps@gmail.com</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
