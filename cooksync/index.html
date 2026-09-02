@@ -115,28 +115,6 @@
       line-height: 1.65;
     }
 
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 28px;
-      padding: 9px 13px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--muted);
-      font-size: 0.88rem;
-      font-weight: 650;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #9bb3ff;
-      box-shadow: 0 0 0 4px rgba(155, 179, 255, 0.12);
-    }
-
     .section {
       padding: 68px 0;
       border-top: 1px solid var(--line);
@@ -216,10 +194,23 @@
       font-weight: 650;
     }
 
+    .button-primary {
+      background: var(--text);
+      color: var(--background);
+      border-color: var(--text);
+    }
+
     .button:hover,
     .button:focus-visible {
       background: rgba(255, 255, 255, 0.09);
       border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .button-primary:hover,
+    .button-primary:focus-visible {
+      background: #d9dce3;
+      color: var(--background);
+      border-color: #d9dce3;
     }
 
     footer {
@@ -285,7 +276,9 @@
         <p class="hero-copy">
           Organize cooking times so every dish is ready together. CookSync coordinates dishes, preparation steps and kitchen resources around the moment you want to serve.
         </p>
-        <div class="status"><span class="status-dot" aria-hidden="true"></span>Closed testing on Google Play</div>
+        <div class="actions">
+          <a class="button button-primary" href="https://play.google.com/store/apps/details?id=com.nuvement.cooksync">Get CookSync on Google Play</a>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="about-title">
@@ -343,9 +336,9 @@
         <div class="section-grid">
           <h2 id="contact-title">Feedback</h2>
           <div>
-            <p class="lead">Testing CookSync?</p>
+            <p class="lead">Have feedback about CookSync?</p>
             <p class="copy">
-              Questions, issues and feedback are welcome during the closed testing phase.
+              Questions, issues and suggestions are welcome.
             </p>
             <div class="actions">
               <a class="button" href="mailto:nuvement.apps@gmail.com">nuvement.apps@gmail.com</a>
